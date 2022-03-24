@@ -111,30 +111,30 @@
             <legend>My Products</legend>
             <div id="divmocha">
               <img src="mocha.jfif" alt="Mocha"><b id="text">  Mocha</b>
-              <label id="labelmocha" for="inputmocha">Quantity : </label><input id="inputmocha" type="number" min="0" max="20">
+              <label id="labelmocha" for="inputmocha">Quantity : </label><input onchange="total()" id="inputmocha" type="number" min="0" max="20">
               <span id="price">$6.00</span>
             </div>
             <hr>
             <div id="divcappuccino">
               <img src="cappuccino.jfif" alt="Cappuccino"><b id="text">  Cappuccino</b>
-              <label id="labelcappuccino" for="inputcappuccino">Quantity : </label><input id="inputcappuccino" type="number" min="0" max="20">
+              <label id="labelcappuccino" for="inputcappuccino">Quantity : </label><input onchange="total()" id="inputcappuccino" type="number" min="0" max="20">
               <span id="price">$8.00</span>
             </div>
             <hr>
             <div id="divamericano">
               <img src="americano.jpeg" alt="Americano"><b id="text">  Americano</b>
-              <label id="labelamericano" for="inputamericano">Quantity : </label><input id="inputamericano" type="number" min="0" max="20">
+              <label id="labelamericano" for="inputamericano">Quantity : </label><input onchange="total()" id="inputamericano" type="number" min="0" max="20">
               <span id="price">$4.00</span>
             </div>
             <hr>
             <div id="divlatte">
               <img src="latte.jfif" alt="Latte"><b id="text">  Latte</b>
-              <label id="labellatte" for="inputlatte">Quantity : </label><input id="inputlatte" type="number" min="0" max="20">
+              <label id="labellatte" for="inputlatte">Quantity : </label><input onchange="total()" id="inputlatte" type="number" min="0" max="20">
               <span id="price">$3.00</span>
               <hr>
             </div>
             <div id="divtotal">
-              <span onclick="total()">Total</span><span> = </span><span id="show"> $0.00</span>
+              <span>Total</span><span> = </span><span id="show"> $0.00</span>
             </div>
           </fieldset>
           <div id="lastpart">
