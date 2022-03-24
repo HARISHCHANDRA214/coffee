@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #formdiv{
+        background-color: aqua;
+      }
+      #form{
+        padding: 10px;
+        background-color: yellow;
+        position: relative;
+        left: 400px;
+        width: 450px;
+      }
+      #header, #mail, #contact{
+        padding: 10px;
+        margin-left: 20px;
+      }
+      #email, #number{
+        width: 200px;
+      }
+      #namefield{
+        padding: 10px;
+        display: flex;
+        margin-left: 20px;
+      }
+      #hr{
+        border: 1px dotted;
+      }
+      #price{
+        vertical-align: top;
+        position: absolute;
+        left: 400px;
+      }
+      #image{
+        height: 50px;
+        width: 50px;
+      }
+      #labelmocha, #labelcappuccino, #labelamericano, #labellatte{
+        position: absolute;
+        left: 200px;
+      }
+      #inputmocha, #inputcappuccino, #inputamericano, #inputlatte{
+        position: absolute;
+        left: 300px;
+      }
+      #text{
+        vertical-align: top;
+      }
+      #divtotal{
+        text-align: end;
+        padding-right: 5px;
+      }
+    </style>
+    <script>
+      var Mocha=0;
+      var Cappuccino=0;
+      var Americano=0;
+      var Latte=0;
+      function total(){
+        var mn=
+        var Mocha=6*parseInt(document.getElementById("inputmocha").value);
+        var Cappuccino=8*parseInt(document.getElementById("inputcappuccino").value);
+        var Americano=4*parseInt(document.getElementById("inputamericano").value);
+        var Latte=3*parseInt(document.getElementById("inputlatte").value);
+        var tota=parseInt(Mocha)+parseInt(Cappuccino)+parseInt(Americano)+parseInt(Latte);
+        var str=tota+"";
+        // document.getElementById("show").innerHTML=str;
+        document.write(str);
+      }
+    </script>
+</head>
+<body>
+    <div id="formdiv">
+      <form id="form" action="">
+        <div><header id="header">Fill the details below</header><hr></div>
+        <div id="namefield">
+          <div id="firstname">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname">
+          </div>
+          <div id="lastname">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname">
+          </div>
+        </div>
+        <div id="mail">
+          <label for="email">Email</label><br>
+          <input type="text" id="email" name="email" placeholder="xxx@xyz.com">
+        </div>
+        <div id="contact">
+          <label for="number">Contact</label><br>
+          <input type="text" id="number" name="number" placeholder="000 000 0000">
+        </div>
+        <div id="order">
+          <fieldset>
+            <legend>My Products</legend>
+            <div id="divmocha">
+              <img id="image" src="mocha.jfif" alt="Mocha"><b id="text">  Mocha</b>
+              <label id="labelmocha" for="inputmocha">Quantity : </label><input id="inputmocha" type="number" min="0" max="20">
+              <span id="price">$6.00</span>
+            </div>
+            <hr id="hr">
+            <div id="divcappuccino">
+              <img id="image" src="cappuccino.jfif" alt="Cappuccino"><b id="text">  Cappuccino</b>
+              <label id="labelcappuccino" for="inputcappuccino">Quantity : </label><input id="inputcappuccino" type="number" min="0" max="20">
+              <span id="price">$8.00</span>
+            </div>
+            <hr id="hr">
+            <div id="divamericano">
+              <img id="image" src="americano.jpeg" alt="Americano"><b id="text">  Americano</b>
+              <label id="labelamericano" for="inputamericano">Quantity : </label><input id="inputamericano" type="number" min="0" max="20">
+              <span id="price">$4.00</span>
+            </div>
+            <hr id="hr">
+            <div id="divlatte">
+              <img id="image" src="latte.jfif" alt="Latte"><b id="text">  Latte</b>
+              <label id="labellatte" for="inputlatte">Quantity : </label><input id="inputlatte" type="number" min="0" max="20">
+              <span id="price">$3.00</span>
+              <hr>
+            </div>
+            <div id="divtotal">
+              <button onclick="total()">Total</button><span> = </span><span id="show">$0.00</span>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+</body>
+</html>

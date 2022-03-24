@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+        function jsfunction(){
+            if(document.getElementById('b').innerHTML=="ON"){
+                document.getElementById('bulb').src='bulbon.jfif';
+                aler();
+                document.getElementById('b').innerHTML='OFF';
+            }else{
+                document.getElementById('bulb').src='bulboff.jfif';
+                document.getElementById('b').innerHTML='ON';
+                aler();
+            }
+           
+        }
+        setTimeout(function aler(){
+            if(document.getElementById('b').innerHTML=="ON"){
+                window.alert("bulb is off.");
+            }
+            if(document.getElementById('b').innerHTML=="OFF"){
+                window.alert("bulb is on.");
+            }                
+        }, 2000);
+    </script>    
+</head>
+<body>
+    <div>
+        <button id="b" onclick="jsfunction()">ON</button>
+        <img style="vertical-align:middle" id="bulb" src="bulboff.jfif" alt="sorry for the inconvenience.">
+    </div>
+</body>
+</html>
